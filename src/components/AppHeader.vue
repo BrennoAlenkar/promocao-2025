@@ -45,9 +45,8 @@
              :class="{ active: activeSection === 'lojas' }"
              @click="navigateToSection('lojas')">Lojas</a>
         </li>
-        <li class="nav-item">
-          <router-link to="/admin" class="nav-link nav-link-admin" 
-                       :class="{ 'admin-link': !isAuthenticated }">
+        <li class="nav-item" v-if="isAuthenticated">
+          <router-link to="/admin" class="nav-link nav-link-admin">
             Usuários
           </router-link>
         </li>
