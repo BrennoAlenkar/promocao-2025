@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste API</title>
+</head>
+<body>
+    <h1>Teste API</h1>
+    <button onclick="testRegister()">Testar Registro</button>
+    <div id="result"></div>
+
+    <script>
+        async function testRegister() {
+            const userData = {
+                nome: "Teste Browser",
+                email: "browser@teste.com",
+                senha: "123456",
+                telefone: "(11) 99999-7777",
+                cpf: "123.456.789-10"
+            };
+
+            try {
+                console.log('Fazendo requisição para:', '/api/v1/usuarios/register');
+                console.log('Dados:', userData);
+                
+                const response = await fetch('/api/v1/usuarios/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(userData)
+                });
+
+                console.log('Response status:', response.status);
+                console.log('Response OK:', response.ok);
+                
+                const data = await response.json();
+                console.log('Response data:', data);
+                
+                document.getElementById('result').innerHTML = 
+                    `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                    
+            } catch (error) {
+                console.error('Erro:', error);
+                document.getElementById('result').innerHTML = 
+                    `<p style="color: red;">Erro: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
