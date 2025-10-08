@@ -1,5 +1,7 @@
 # Sistema de Promoções
 
+🔗 Acesse o site: https://promocao-2025.vercel.app/
+
 Aplicação full-stack desenvolvida com Vue.js 3 e Node.js para gerenciar campanhas promocionais. Inclui mapas interativos, sistema de ganhadores e painel administrativo.
 
 ## Stack Tecnológico
