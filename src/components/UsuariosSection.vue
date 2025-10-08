@@ -67,7 +67,7 @@
         </div>
         <form @submit.prevent="saveUser" class="edit-form">
           <div class="form-group">
-            <label for="edit-nome">Nome Completo:</label>
+            <label for="edit-nome">Nome:</label>
             <input 
               id="edit-nome"
               v-model="editingUser.nome" 

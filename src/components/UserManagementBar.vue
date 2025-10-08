@@ -58,7 +58,7 @@
         
         <form @submit.prevent="saveUser" class="edit-form">
           <div class="form-group">
-            <label>Nome Completo</label>
+            <label>Nome</label>
             <input v-model="editingUser.nome" type="text" required>
           </div>
           

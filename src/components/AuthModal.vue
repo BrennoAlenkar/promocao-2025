@@ -45,13 +45,13 @@
           <!-- Formulário de Cadastro -->
           <form v-else @submit.prevent="handleRegister" class="auth-form">
             <div class="form-group">
-              <label for="nome">Nome Completo</label>
+              <label for="nome">Nome</label>
               <input
                 id="nome"
                 v-model="registerForm.nome"
                 type="text"
                 required
-                placeholder="Seu nome completo"
+                placeholder="Seu nome"
               >
             </div>
             
